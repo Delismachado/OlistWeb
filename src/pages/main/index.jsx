@@ -1,4 +1,5 @@
 import React, { Component} from "react";
+import Button from "../../components/Button";
 import api from "../../services/api";
 import "./styles.css";
 
@@ -17,8 +18,8 @@ export default class Main extends Component {
   };
 
   addNewProducts = async () => {
-    const response = await api.post("/products");
-    //TODO
+    const newProduct = await api.post("/products");
+    // TODO
   };
 
   updateProducts = async () => {
@@ -41,7 +42,13 @@ export default class Main extends Component {
             <article key={product.id}>
               <strong>Nome: {product.name}</strong>
               <p>Descrição: {product.description}</p>
-              <p>Preço: R${product.price}</p>              
+              <p>Preço: R${product.price}</p>
+              <Button class="warn">
+                Editar
+              </Button>
+              <Button class="danger">
+                Apagar
+              </Button>
             </article>
           )}
         </div>

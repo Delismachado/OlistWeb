@@ -9,11 +9,3 @@ h1#main-header {
     align-items: center;
     justify-content: center;
 }
-
-button {
-    background: #732a4e;
-    font-size: 18px;
-    width: 10%;
-    padding: 15px;
-    color: #fff;
-}
