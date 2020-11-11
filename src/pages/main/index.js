@@ -14,17 +14,34 @@ export default class Main extends Component {
   loadProducts = async () => {
     const response = await api.get("/products");
     this.setState({products: response.data});
-  }
+  };
+
+  addNewProducts = async () => {
+    const response = await api.post("/products");
+    //TODO
+  };
+
+  updateProducts = async () => {
+    const response = await api.put("/products");
+    //TODO - To update a product, I need to pass the product id
+  };
+
+  deleteProducts = async () => {
+    const response = await api.delete("/products");
+    //TODO - To delete a product, I need to pass the product id
+  };
+
 
     render() {
       const {products} = this.state;
-      return(
+      return(        
         <div className="product-list">
+          <input type="text" placeholder="Search"/>                   
           {products.map((product) => 
             <article key={product.id}>
               <strong>Nome: {product.name}</strong>
               <p>Descrição: {product.description}</p>
-              <p>Preço: R${product.price}</p>
+              <p>Preço: R${product.price}</p>              
             </article>
           )}
         </div>
