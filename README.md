@@ -1,9 +1,6 @@
-# Getting Started with Create React App
+### Para iniciar o projeto, no diretório rode o comando:
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ `yarn start`
+### E para ver no browser, abra:
+ [http://localhost:3000](http://localhost:3000)
 

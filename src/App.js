@@ -6,10 +6,10 @@ import "./styles.css";
 
 const App = () => (
     <div className="App">
-     <Header />
-     <Main />
+      <Header />
+      <Main />
     </div>
-  );
+);
 
 
 export default App;
